@@ -7,10 +7,11 @@ use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PresenceChannel;
 use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
+use Illuminate\Contracts\Broadcasting\ShouldBroadcastNow;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class AlertEvent implements ShouldBroadcast
+class AlertEvent implements ShouldBroadcastNow
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
     public $messgae;
@@ -19,7 +20,7 @@ class AlertEvent implements ShouldBroadcast
      */
     public function __construct()
     {
-        $this->messgae = "Hello Adnan";
+        $this->messgae = "Hello Adnan It Works";
     }
 
     /**
